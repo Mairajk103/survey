@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Survey + File Upload</title>
+  <link href="https://fonts.googleapis.com/css2?family=Michroma&display=swap" rel="stylesheet">
+  <style>
+    * {
+      font-family: 'Michroma', sans-serif;
+      box-sizing: border-box;
+    }
+    body {
+      background-color: #f9f9f9;
+      color: #333;
+      padding: 20px;
+      line-height: 1.6;
+    }
+    h2 {
+      font-size: 24px;
+      margin-bottom: 15px;
+    }
+    label {
+      display: block;
+      margin-bottom: 4px;
+      font-weight: bold;
+    }
+    input[type="radio"],
+    input[type="checkbox"] {
+      margin: 2px 6px 2px 0;
+      padding: 0;
+      vertical-align: middle;
+    }
+    input[type="file"],
+    input[type="text"],
+    textarea {
+      margin-top: 6px;
+      margin-bottom: 12px;
+      padding: 8px;
+      font-size: 14px;
+      width: 100%;
+      max-width: 400px;
+    }
+    input[type="submit"] {
+      background-color: #333;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      font-size: 16px;
+      cursor: pointer;
+      margin-top: 20px;
+    }
+    input[type="submit"]:hover {
+      background-color: #555;
+    }
+  </style>
+  <script>
+    function toggleEuropeBox() {
+      const europeRadio = document.getElementById("europe");
+      const europeBox = document.getElementById("europeTextBox");
+      europeBox.style.display = europeRadio.checked ? "block" : "none";
+    }
+  </script>
+</head>
+<body>
+  <h2>Do you have a Tap Tap Send or Remitly account?</h2>
+
+  <form action="https://formspree.io/f/mldnqyjp" method="POST" enctype="multipart/form-data">
+    <!-- Country -->
+    <label>1. In which country do you live?</label>
+    <input type="radio" name="country" value="UK" onclick="toggleEuropeBox()"> UK
+    <input type="radio" name="country" value="U.A.E" onclick="toggleEuropeBox()"> U.A.E
+    <input type="radio" name="country" value="Europe" id="europe" onclick="toggleEuropeBox()"> Europe<br><br>
+
+    <!-- Europe Country (shown only if Europe selected) -->
+    <div id="europeTextBox" style="display:none;">
+      <label>2. If Europe, then which country?</label>
+      <textarea name="europeCountry" rows="2" cols="50" placeholder="e.g., Germany"></textarea><br><br>
+    </div>
+
+   
+
+    <!-- WhatsApp Contact -->
+    <label>4. Submit to your WhatsApp contact number:</label>
+    <textarea name="whatsappNumber" rows="2" cols="50" placeholder="e.g., +923000000000"></textarea><br><br>
+<p style="margin-top: 40px; font-size: 14px; color: #666; text-align: center;">
+  Created by <strong>Mairaj Carder</strong>
+</p>
+    <input type="submit" value="Submit Survey">
+  </form>
+</body>
+</html>

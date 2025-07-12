@@ -1,0 +1,51 @@
+@import url('https://fonts.googleapis.com/css2?family=Michroma&display=swap');
+
+* {
+  font-family: 'Michroma', sans-serif;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #f9f9f9;
+  color: #333;
+  padding: 20px;
+  line-height: 1.6;
+}
+
+h2 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+label {
+  display: block;
+  margin-top: 15px;
+  font-weight: bold;
+}
+
+input[type="radio"],
+input[type="checkbox"],
+input[type="file"],
+input[type="text"],
+textarea {
+  margin-top: 5px;
+  margin-bottom: 10px;
+  padding: 8px;
+  font-size: 14px;
+  width: 100%;
+  max-width: 400px;
+}
+
+input[type="submit"] {
+  background-color: #333;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  margin-top: 20px;
+}
+
+input[type="submit"]:hover {
+  background-color: #555;
+}
